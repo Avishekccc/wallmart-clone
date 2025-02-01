@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+.list-sec li:hover{
+    text-decoration: underline;
+}
+
+.grid-box-1{
+    background-image: url(./assets/grid_1.webp);
+    background-size: contain;
+}
+.grid-box-2{
+    background-image: url(./assets/grid_2_img.webp);
+    background-size: cover;
+    background-position: center;
+}
+.grid-box-3{
+    background-image: url(./assets/grid_3_img.webp);
+    background-size: cover;
+    background-position: 100%;
+}
+.grid-box-4{
+    background-image: url(./assets/grid_4_img.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.grid-box-5{
+    background-image: url(./assets/grid_5_img.webp);
+     background-size: cover;
+    background-position: center;
+}
+.grid-box-6{
+    background-image: url(./assets/grid_6_img.webp);
+     background-size: cover;
+    background-position: center;
+}
+.grid-box-7{
+    background-image: url(./assets/grid_7_img.webp);
+     background-size: cover;
+    background-position: center;
+}
+.grid-box-8{
+    background-image: url(./assets/grid_8_img.webp);
+     background-size: cover;
+    background-position: center;
+}
+.grid-box-9{
+    background-image: url(./assets/grid_9_img.webp);
+     background-size: cover;
+    background-position: center;
+}
+.grid-box-10{
+    background-image: url(./assets/grid_10_img.webp);
+     background-size: cover;
+    background-position: 100%;
+}

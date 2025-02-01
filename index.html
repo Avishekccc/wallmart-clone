@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./assets/walmart.png" type="image/x-icon" />
+    <title>Wallmart clone</title>
+  </head>
+  <body>
+    <nav class="bg-[#0053e2] fixed top-0 w-full">
+      <div class="flex items-center justify-between h-[90px] mx-[1.5%] ">
+        <!-- -------------------logo-------------- -->
+        <div
+          class="logo h-[50px] w-[50px] rounded-full flex justify-center items-center hover:bg-[#001e60]"
+        >
+          <img src="./assets/walmart.png" alt="" class="h-[40px] w-[40px]" />
+        </div>
+
+        <!-- -------------------nav-select-sec-------------- -->
+
+        <div
+          class="select-sec hidden lg:flex items-center gap-2 px-2 py-2 rounded-4xl bg-[#002e99] hover:bg-[#001e60] xl:flex"
+        >
+          <div class="icon">
+            <img
+              src="./assets/nav-mbl-icon.webp"
+              alt=""
+              class="h-[35px] w-[35px] rounded-full"
+            />
+          </div>
+          <div class="text leading-5 text-white">
+            <p class="font-bold">How do want yours items?</p>
+            <p class="text-[14px]">Sacramento,95829 . Sacramento supe...</p>
+          </div>
+          <div class="dropdown-icon text-3xl text-white">
+            <i class="bx bx-chevron-down"></i>
+          </div>
+        </div>
+
+        <!-- -------------------search-sec-------------- -->
+
+        <div
+          class="search-box bg-white rounded-4xl active:border-3 active:rounded-none border-black p-2"
+        >
+          <div class="flex items-center shrink bg-white">
+            <div class="text-[#002e99] px-4">
+              <input
+                type="text"
+                placeholder="Search everything at Walmart online and in store"
+                class="xl:w-[600px] lg:w[400px] sm:w-[600] outline-none"
+              />
+            </div>
+            <div
+              class="search-icon text-2xl text-white bg-[#002e99] flex justify-center items-center h-[35px] w-[35px] rounded-full hover:bg-[#2e2d47]"
+            >
+              <i class="bx bx-search"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- -------------------reorder-sec-------------- -->
+
+        <div
+          class="order-item flex items-center gap-2 px-4 py-2 text-white hover:bg-[#001e60] hover:rounded-4xl md:"
+        >
+          <div class="heart-icon pt-2">
+            <i class="bx bx-heart"></i>
+          </div>
+          <div class="text leading-5">
+            <p class="text-[14px]">Reorder</p>
+            <p class="text-[15px] font-bold">My Items</p>
+          </div>
+        </div>
+
+        <!-- -------------------signin-sec-------------- -->
+
+        <div
+          class="order-item flex items-center gap-2 px-4 py-2 text-white hover:bg-[#001e60] hover:rounded-4xl"
+        >
+          <div class="heart-icon pt-2">
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="text leading-5">
+            <p class="text-[14px]">Reorder</p>
+            <p class="text-[15px] font-bold">My Items</p>
+          </div>
+        </div>
+
+        <div
+          class="order-item flex flex-col items-center px-4 leading-4 text-white hover:bg-[#001e60] hover:rounded-full relative"
+        >
+          <div class="heart-icon text-2xl">
+            <span
+              class="absolute left-[40px] bg-amber-400 rounded-full text-black font-bold text-[12px] h-4 w-4 flex justify-center items-center"
+              >0</span
+            >
+            <i class="bx bx-cart-alt"></i>
+          </div>
+          <p>&#36;0.00</p>
+        </div>
+      </div>
+    </nav>
+
+    <!-- -------------------lower-nav-sec-------------- -->
+
+    <section class="bg-[#f0f5ff] fixed top-22 w-full">
+      <div class="flex items-center h-[50px] mx-[2%]">
+        <div class="flex gap-4">
+          <div class="select-1 text-[#001e60]">
+            <i class="bx bx-grid-alt"></i>
+            <select name="department" id="depart" class="font-bold">
+              <option value="department">Departments</option>
+            </select>
+          </div>
+          <div class="select-2 text-[#001e60]">
+            <i class="bx bx-command"></i>
+            <select name="services" id="services" class="font-bold">
+              <option value="services">Services</option>
+            </select>
+          </div>
+        </div>
+
+        <ul
+          class="list-sec flex items-center p-3 gap-5 text-[14px] text-[#002e99]"
+        >
+          <li>
+            <a href="" class="border-l-1 border-b-blue-800 pl-4">Savings</a>
+          </li>
+          <li><a href="">Grocery & Essentials</a></li>
+          <li><a href="">valentine's Day</a></li>
+          <li><a href="">Game Time</a></li>
+          <li><a href="">New & Trending</a></li>
+          <li><a href="">Fashion</a></li>
+          <li><a href="">Home</a></li>
+          <li><a href="">Electronics</a></li>
+          <li><a href="">Gift Ideas</a></li>
+          <li><a href="">Registry</a></li>
+          <li><a href="">ONE Cash</a></li>
+          <li><a href="">Walmart+</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- -------------hero grid sec--------------------------- -->
+
+    <section class="mt-[11%] mx-[2%]">
+      <!-- <div class="bento-grid"> -->
+      <div class="grid grid-cols-12 grid-rows-12 gap-6 h-[140dvh]">
+        <div
+          class="grid-box-1 col-span-3 row-span-4 rounded-xl p-6 text-[#001e60]"
+        >
+          <div class="">
+            <h1 class="text-2xl font-bold leading-7 tracking-tight">
+              Stay dewy all winter, from $10
+            </h1>
+            <p class="text-[13px] underline leading-12">
+              <a href="#">Shop beauty</a>
+            </p>
+          </div>
+        </div>
+        <div
+          class="grid-box-2 col-span-6 row-span-7 rounded-xl p-6 cursor-pointer"
+        >
+          <div class="text-white mb-7">
+            <h2 class="text-2xl font-semibold">For the fam—from $14</h2>
+            <h1 class="text-5xl font-bold">Reebok refresh</h1>
+          </div>
+          <button
+            class="bg-white font-bold text-[13px] rounded-2xl py-1.5 px-3 cursor-pointer boder-2 boder"
+          >
+            Shop Now
+          </button>
+        </div>
+        <div
+          class="grid-box-3 col-span-3 row-span-4 rounded-xl p-6 text-[#001e60]"
+        >
+          <div class="">
+            <h1 class="text-2xl font-bold leading-7 tracking-tight">
+              Super-low tech prices
+            </h1>
+            <p class="text-[13px] underline leading-12">
+              <a href="#">Shop now</a>
+            </p>
+          </div>
+        </div>
+        <div class="grid-box-4 col-span-3 row-span-10 rounded-xl p-6">
+          <div class="text-white">
+            <h1 class="text-2xl font-bold leading-7 tracking-tight">
+              New & toasty looks for the fam, from $13
+            </h1>
+            <p class="text-[13px] underline leading-12">
+              <a href="#">Shop fashion</a>
+            </p>
+          </div>
+        </div>
+        <div
+          class="grid-box-5 col-span-3 row-span-4 rounded-xl p-6 text-[#001e60]"
+        >
+          <div class="">
+            <h1 class="text-2xl font-bold leading-7 tracking-tight">
+              Warm accessories from $6
+            </h1>
+            <p class="text-[13px] underline leading-12">
+              <a href="#">Shop now</a>
+            </p>
+          </div>
+        </div>
+        <div
+          class="grid-box-6 col-span-3 row-span-7 rounded-xl p-6 text-[#001e60]"
+        >
+          <div class="w-[200px]">
+            <h1 class="text-2xl font-bold leading-7 tracking-tight">
+              Prep for falling temps
+            </h1>
+            <p class="text-[13px] underline leading-12">
+              <a href="#">Shop now</a>
+            </p>
+          </div>
+        </div>
+        <div
+          class="grid-box-7 col-span-3 row-span-7 rounded-xl p-6 text-[#001e60]"
+        >
+          <div class="">
+            <h1 class="text-2xl font-bold leading-7 tracking-tight">
+              Up to 65% off
+            </h1>
+            <p class="text-[13px] underline leading-12">
+              <a href="#">Shop now</a>
+            </p>
+          </div>
+        </div>
+        <div
+          class="grid-box-8 col-span-3 row-span-15 rounded-xl p-6 text-[#001e60]"
+        >
+          <div class="">
+            <h1 class="text-2xl font-bold leading-7 tracking-tight">
+              Supplements for sniffle season
+            </h1>
+            <p class="text-[13px] underline leading-12">
+              <a href="#">Shop now</a>
+            </p>
+          </div>
+        </div>
+        <div
+          class="grid-box-9 col-span-3 row-span-9 rounded-xl p-6 text-[#001e60]"
+        >
+          <div class="w-[220px]">
+            <h1 class="text-2xl font-bold leading-7 tracking-tight">
+              Save on bed & bath musts
+            </h1>
+            <p class="text-[13px] underline leading-12">
+              <a href="#">Shop now</a>
+            </p>
+          </div>
+        </div>
+        <div
+          class="grid-box-10 col-span-6 row-span-9 rounded-xl p-6 text-[#001e60]"
+        >
+          <div class="w-[30dvw]">
+            <h1 class="text-[28px] font-normal leading-9 tracking-tight">
+              Walmart+ members get free delivery from their local stores
+            </h1>
+            <p class="text-[14px] leading-8">
+              One free trial per member. Terms apply.
+            </p>
+            <p class="text-[14px] underline leading-12">
+              <a href="#">Join walmart+</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </section>
+
+    <!-- -------------items Cards row - 1--------------------------- -->
+
+    <section class="m-[2%]">
+      <h1 class="text-2xl font-bold">Continue your shopping</h1>
+
+      <div
+        class="card-wrapper flex justify-between mt-[3%] border-b-1 border-gray-200"
+      >
+        <div class="card h-[350px] w-[250px] mb-[3%]">
+          <div class="product-img">
+            <img src="./assets/product_1.webp" alt="" />
+          </div>
+          <p class="text-[12px] text-gray-500">Sponsored</p>
+          <div class="text mb-[10px]">
+            <h1 class="leading-9 text-[19px] font-bold text-green-700">
+              Now &#36;258.42
+              <span class="line-through text-[16px] font-light text-gray-600"
+                >&#36;480.99</span
+              >
+            </h1>
+            <p class="h-[50px] overflow-hidden text-gray-600 text-[15px]">
+              EUROCO Twin Size Upholstery Daybed, Storage Sofa Bed with Drawers
+              and Moveable Twin Trundle Bed for Kids and Adults, No Box Spring
+              Needed, Dark Gray
+            </p>
+          </div>
+          <div class="button">
+            <!-- <span class="text-[25px]">+</span> -->
+            <button
+              class="border-1 border-gray-600 text-gray-600 rounded-2xl px-3 py-1 flex items-center font-semibold"
+            >
+              options
+            </button>
+          </div>
+        </div>
+        <div class="card h-[350px] w-[250px]">
+          <div class="product-img">
+            <img src="./assets/product_1.webp" alt="" />
+          </div>
+          <p class="text-[12px] text-gray-500">Sponsored</p>
+          <div class="text mb-[10px]">
+            <h1 class="leading-9 text-[19px] font-bold text-green-700">
+              Now &#36;258.42
+              <span class="line-through text-[16px] font-light text-gray-600"
+                >&#36;480.99</span
+              >
+            </h1>
+            <p class="h-[50px] overflow-hidden text-gray-600 text-[15px]">
+              EUROCO Twin Size Upholstery Daybed, Storage Sofa Bed with Drawers
+              and Moveable Twin Trundle Bed for Kids and Adults, No Box Spring
+              Needed, Dark Gray
+            </p>
+          </div>
+          <div class="button">
+            <!-- <span class="text-[25px]">+</span> -->
+            <button
+              class="border-1 border-gray-600 text-gray-600 rounded-2xl px-3 py-1 flex items-center font-semibold"
+            >
+              options
+            </button>
+          </div>
+        </div>
+        <div class="card h-[350px] w-[250px]">
+          <div class="product-img">
+            <img src="./assets/product_1.webp" alt="" />
+          </div>
+          <p class="text-[12px] text-gray-500">Sponsored</p>
+          <div class="text mb-[10px]">
+            <h1 class="leading-9 text-[19px] font-bold text-green-700">
+              Now &#36;258.42
+              <span class="line-through text-[16px] font-light text-gray-600"
+                >&#36;480.99</span
+              >
+            </h1>
+            <p class="h-[50px] overflow-hidden text-gray-600 text-[15px]">
+              EUROCO Twin Size Upholstery Daybed, Storage Sofa Bed with Drawers
+              and Moveable Twin Trundle Bed for Kids and Adults, No Box Spring
+              Needed, Dark Gray
+            </p>
+          </div>
+          <div class="button">
+            <!-- <span class="text-[25px]">+</span> -->
+            <button
+              class="border-1 border-gray-600 text-gray-600 rounded-2xl px-3 py-1 flex items-center font-semibold"
+            >
+              options
+            </button>
+          </div>
+        </div>
+        <div class="card h-[350px] w-[250px]">
+          <div class="product-img">
+            <img src="./assets/product_1.webp" alt="" />
+          </div>
+          <p class="text-[12px] text-gray-500">Sponsored</p>
+          <div class="text mb-[10px]">
+            <h1 class="leading-9 text-[19px] font-bold text-green-700">
+              Now &#36;258.42
+              <span class="line-through text-[16px] font-light text-gray-600"
+                >&#36;480.99</span
+              >
+            </h1>
+            <p class="h-[50px] overflow-hidden text-gray-600 text-[15px]">
+              EUROCO Twin Size Upholstery Daybed, Storage Sofa Bed with Drawers
+              and Moveable Twin Trundle Bed for Kids and Adults, No Box Spring
+              Needed, Dark Gray
+            </p>
+          </div>
+          <div class="button">
+            <!-- <span class="text-[25px]">+</span> -->
+            <button
+              class="border-1 border-gray-600 text-gray-600 rounded-2xl px-3 py-1 flex items-center font-semibold"
+            >
+              options
+            </button>
+          </div>
+        </div>
+        <div class="card h-[350px] w-[250px]">
+          <div class="product-img">
+            <img src="./assets/product_1.webp" alt="" />
+          </div>
+          <p class="text-[12px] text-gray-500">Sponsored</p>
+          <div class="text mb-[10px]">
+            <h1 class="leading-9 text-[19px] font-bold text-green-700">
+              Now &#36;258.42
+              <span class="line-through text-[16px] font-light text-gray-600"
+                >&#36;480.99</span
+              >
+            </h1>
+            <p class="h-[50px] overflow-hidden text-gray-600 text-[15px]">
+              EUROCO Twin Size Upholstery Daybed, Storage Sofa Bed with Drawers
+              and Moveable Twin Trundle Bed for Kids and Adults, No Box Spring
+              Needed, Dark Gray
+            </p>
+          </div>
+          <div class="button">
+            <!-- <span class="text-[25px]">+</span> -->
+            <button
+              class="border-1 border-gray-600 text-gray-600 rounded-2xl px-3 py-1 flex items-center font-semibold"
+            >
+              options
+            </button>
+          </div>
+        </div>
+        <div class="card h-[350px] w-[250px]">
+          <div class="product-img">
+            <img src="./assets/product_1.webp" alt="" />
+          </div>
+          <p class="text-[12px] text-gray-500">Sponsored</p>
+          <div class="text mb-[10px]">
+            <h1 class="leading-9 text-[19px] font-bold text-green-700">
+              Now &#36;258.42
+              <span class="line-through text-[16px] font-light text-gray-600"
+                >&#36;480.99</span
+              >
+            </h1>
+            <p class="h-[50px] overflow-hidden text-gray-600 text-[15px]">
+              EUROCO Twin Size Upholstery Daybed, Storage Sofa Bed with Drawers
+              and Moveable Twin Trundle Bed for Kids and Adults, No Box Spring
+              Needed, Dark Gray
+            </p>
+          </div>
+          <div class="button">
+            <!-- <span class="text-[25px]">+</span> -->
+            <button
+              class="border-1 border-gray-600 text-gray-600 rounded-2xl px-3 py-1 flex items-center font-semibold"
+            >
+              options
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------items Cards row - 2--------------------------- -->
+
+    <section class="m-[2%]">
+      <h1 class="text-2xl font-bold">Trending in sports your shopping</h1>
+
+      <div
+        class="card-wrapper flex justify-between mt-[3%] border-b-1 border-gray-200"
+      >
+        <div class="card h-[350px] w-[250px] mb-[3%]">
+          <div class="product-img">
+            <img src="./assets/product_1.webp" alt="" />
+          </div>
+          <p class="text-[12px] text-gray-500">Sponsored</p>
+          <div class="text mb-[10px]">
+            <h1 class="leading-9 text-[19px] font-bold text-green-700">
+              Now &#36;258.42
+              <span class="line-through text-[16px] font-light text-gray-600"
+                >&#36;480.99</span
+              >
+            </h1>
+            <p class="h-[50px] overflow-hidden text-gray-600 text-[15px]">
+              EUROCO Twin Size Upholstery Daybed, Storage Sofa Bed with Drawers
+              and Moveable Twin Trundle Bed for Kids and Adults, No Box Spring
+              Needed, Dark Gray
+            </p>
+          </div>
+          <div class="button">
+            <!-- <span class="text-[25px]">+</span> -->
+            <button
+              class="border-1 border-gray-600 text-gray-600 rounded-2xl px-3 py-1 flex items-center font-semibold"
+            >
+              options
+            </button>
+          </div>
+        </div>
+        <div class="card h-[350px] w-[250px]">
+          <div class="product-img">
+            <img src="./assets/product_1.webp" alt="" />
+          </div>
+          <p class="text-[12px] text-gray-500">Sponsored</p>
+          <div class="text mb-[10px]">
+            <h1 class="leading-9 text-[19px] font-bold text-green-700">
+              Now &#36;258.42
+              <span class="line-through text-[16px] font-light text-gray-600"
+                >&#36;480.99</span
+              >
+            </h1>
+            <p class="h-[50px] overflow-hidden text-gray-600 text-[15px]">
+              EUROCO Twin Size Upholstery Daybed, Storage Sofa Bed with Drawers
+              and Moveable Twin Trundle Bed for Kids and Adults, No Box Spring
+              Needed, Dark Gray
+            </p>
+          </div>
+          <div class="button">
+            <!-- <span class="text-[25px]">+</span> -->
+            <button
+              class="border-1 border-gray-600 text-gray-600 rounded-2xl px-3 py-1 flex items-center font-semibold"
+            >
+              options
+            </button>
+          </div>
+        </div>
+        <div class="card h-[350px] w-[250px]">
+          <div class="product-img">
+            <img src="./assets/product_1.webp" alt="" />
+          </div>
+          <p class="text-[12px] text-gray-500">Sponsored</p>
+          <div class="text mb-[10px]">
+            <h1 class="leading-9 text-[19px] font-bold text-green-700">
+              Now &#36;258.42
+              <span class="line-through text-[16px] font-light text-gray-600"
+                >&#36;480.99</span
+              >
+            </h1>
+            <p class="h-[50px] overflow-hidden text-gray-600 text-[15px]">
+              EUROCO Twin Size Upholstery Daybed, Storage Sofa Bed with Drawers
+              and Moveable Twin Trundle Bed for Kids and Adults, No Box Spring
+              Needed, Dark Gray
+            </p>
+          </div>
+          <div class="button">
+            <!-- <span class="text-[25px]">+</span> -->
+            <button
+              class="border-1 border-gray-600 text-gray-600 rounded-2xl px-3 py-1 flex items-center font-semibold"
+            >
+              options
+            </button>
+          </div>
+        </div>
+        <div class="card h-[350px] w-[250px]">
+          <div class="product-img">
+            <img src="./assets/product_1.webp" alt="" />
+          </div>
+          <p class="text-[12px] text-gray-500">Sponsored</p>
+          <div class="text mb-[10px]">
+            <h1 class="leading-9 text-[19px] font-bold text-green-700">
+              Now &#36;258.42
+              <span class="line-through text-[16px] font-light text-gray-600"
+                >&#36;480.99</span
+              >
+            </h1>
+            <p class="h-[50px] overflow-hidden text-gray-600 text-[15px]">
+              EUROCO Twin Size Upholstery Daybed, Storage Sofa Bed with Drawers
+              and Moveable Twin Trundle Bed for Kids and Adults, No Box Spring
+              Needed, Dark Gray
+            </p>
+          </div>
+          <div class="button">
+            <!-- <span class="text-[25px]">+</span> -->
+            <button
+              class="border-1 border-gray-600 text-gray-600 rounded-2xl px-3 py-1 flex items-center font-semibold"
+            >
+              options
+            </button>
+          </div>
+        </div>
+        <div class="card h-[350px] w-[250px]">
+          <div class="product-img">
+            <img src="./assets/product_1.webp" alt="" />
+          </div>
+          <p class="text-[12px] text-gray-500">Sponsored</p>
+          <div class="text mb-[10px]">
+            <h1 class="leading-9 text-[19px] font-bold text-green-700">
+              Now &#36;258.42
+              <span class="line-through text-[16px] font-light text-gray-600"
+                >&#36;480.99</span
+              >
+            </h1>
+            <p class="h-[50px] overflow-hidden text-gray-600 text-[15px]">
+              EUROCO Twin Size Upholstery Daybed, Storage Sofa Bed with Drawers
+              and Moveable Twin Trundle Bed for Kids and Adults, No Box Spring
+              Needed, Dark Gray
+            </p>
+          </div>
+          <div class="button">
+            <!-- <span class="text-[25px]">+</span> -->
+            <button
+              class="border-1 border-gray-600 text-gray-600 rounded-2xl px-3 py-1 flex items-center font-semibold"
+            >
+              options
+            </button>
+          </div>
+        </div>
+        <div class="card h-[350px] w-[250px]">
+          <div class="product-img">
+            <img src="./assets/product_1.webp" alt="" />
+          </div>
+          <p class="text-[12px] text-gray-500">Sponsored</p>
+          <div class="text mb-[10px]">
+            <h1 class="leading-9 text-[19px] font-bold text-green-700">
+              Now &#36;258.42
+              <span class="line-through text-[16px] font-light text-gray-600"
+                >&#36;480.99</span
+              >
+            </h1>
+            <p class="h-[50px] overflow-hidden text-gray-600 text-[15px]">
+              EUROCO Twin Size Upholstery Daybed, Storage Sofa Bed with Drawers
+              and Moveable Twin Trundle Bed for Kids and Adults, No Box Spring
+              Needed, Dark Gray
+            </p>
+          </div>
+          <div class="button">
+            <!-- <span class="text-[25px]">+</span> -->
+            <button
+              class="border-1 border-gray-600 text-gray-600 rounded-2xl px-3 py-1 flex items-center font-semibold"
+            >
+              options
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------grid sec - 2--------------------------- -->
+
+    <section>
+      <div class="m-[2%]">
+        <div class="grid grid-cols-12 grid-rows-10 h-[90dvh] gap-6">
+          <div
+            class="col-span-5 row-span-10 bg-[url('./assets/grid-sec-2-img-1.webp')] bg-cover rounded-xl"
+          ></div>
+          <div
+            class="col-span-4 row-span-5 bg-[url('./assets/grid-sec-2-img-2.webp')] bg-cover p-6 rounded-xl"
+          >
+            <div class="w-[250px] text-[#041e42]">
+              <h1 class="text-2xl font-bold leading-7 tracking-tight">
+                More bang for your budget
+              </h1>
+              <p class="text-[13px] underline leading-12">
+                <a href="#">Shop fashion</a>
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-span-3 row-span-10 bg-[url('./assets/grid-sec-2-img-3.webp')] bg-cover p-6 rounded-xl"
+          >
+            <div class="w-[200px] text-[#041e42]">
+              <h1 class="text-2xl font-bold leading-7 tracking-tight">
+                Ready,set,save big on tech
+              </h1>
+              <p class="text-[13px] underline leading-12">
+                <a href="#">Shop now</a>
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-span-2 row-span-5 bg-[url('./assets/grid-sec-2-img-4.webp')] bg-cover p-6 rounded-xl"
+          >
+            <div class=" text-[#041e42]">
+              <h1 class="text-2xl font-bold leading-7 tracking-tight">
+                Storage savings, from $10
+              </h1>
+              <p class="text-[13px] underline leading-12">
+                <a href="#">Shop now</a>
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-span-2 row-span-5 bg-[url('./assets/grid-sec-2-img-5.webp')] bg-cover bg-center p-6 rounded-xl"
+          >
+            <div class=" text-[#041e42]">
+              <h1 class="text-2xl font-bold leading-7 tracking-tight">
+                So much fun for way less
+              </h1>
+              <p class="text-[13px] underline leading-12">
+                <a href="#">Shop toys</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
